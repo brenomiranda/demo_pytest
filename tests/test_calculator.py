@@ -3,7 +3,7 @@ from src.calculator import Calculator
 
 class TestCalculator():
 
-    skipComplexTests = True
+    skipComplexTests = False
 
     def setup_class(self):
         self.calc = Calculator()
@@ -33,7 +33,9 @@ class TestCalculator():
         #self.calc = Calculator()
         assert self.calc.subtraction(10, 5) == 5
     
-    @pytest.mark.skip(reason=None)
+    def test_subtraction2(self):
+        assert self.calc.subtraction(5, 10) == -5
+    
     def test_multiplication(self):
         #self.calc = Calculator()
         assert self.calc.multiplication(2, 10) == 20
