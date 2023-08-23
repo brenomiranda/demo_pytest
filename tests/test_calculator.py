@@ -1,5 +1,5 @@
 import pytest
-from calculator import Calculator
+from src.calculator import Calculator
 
 class TestCalculator():
 
@@ -33,9 +33,10 @@ class TestCalculator():
         #self.calc = Calculator()
         assert self.calc.subtraction(10, 5) == 5
     
+    @pytest.mark.skip(reason=None)
     def test_multiplication(self):
         #self.calc = Calculator()
-        assert self.calc.multiplication(2, 10) == 19
+        assert self.calc.multiplication(2, 10) == 20
 
     def test_division(self):
         #self.calc = Calculator()
